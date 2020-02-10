@@ -3,7 +3,7 @@ data "template_file" "install_script" {
 }
 resource "aws_instance" "gophish-machine" {
   ami                    = "${data.aws_ami.ubuntu.id}"
-  instance_type          = "${var.gpu_instance}"
+  instance_type          = "${var.instance_type}"
   vpc_security_group_ids = ["${aws_security_group.allow_connections_gophish.id}"]
   /* Specify SSH Key Name for login */
   key_name = "${var.ssh_key_name}"

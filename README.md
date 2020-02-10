@@ -30,10 +30,7 @@ variable "aws_region" {
 variable "ssh_key_path" {
   default = "C:/Users/...."
 }
-variable "enable_rdp" {
-  default = true
-}
-variable "gpu_instance" {
+variable "instance_type" {
   default = "t2.large"
 }
 variable "ssh_key_name" {
