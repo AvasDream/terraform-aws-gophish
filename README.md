@@ -11,7 +11,7 @@ Deploy Gophish to AWS EC2 Instance with Terraform.
 # Setup
 
 1. Create a variables.tf file.
-2. Copy example Content in Variables file.
+2. Copy example Content in Variables file. Enter your own access and secret key and change instance size preferences.
 3. Execute `terraform init`
 4. Execute `terraform apply`
 
