@@ -1,8 +1,21 @@
 # Terraform-AWS-gophish
 
-Deploy Gophish to AWS Instance with Terraform.
+Deploy Gophish to AWS EC2 Instance with Terraform.
 
-# variables.tf file
+# Requirements
+
+- Terraform is installed and in the current \$PATH
+- You know your AWS access and secret keys. [Official Documentation](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html)
+- You created an AWS SSH Key. [Official Documentation](https://docs.aws.amazon.com/ground-station/latest/ug/create-ec2-ssh-key-pair.html)
+
+# Setup
+
+1. Create a variables.tf file.
+2. Copy example Content in Variables file.
+3. Execute `terraform init`
+4. Execute `terraform apply`
+
+variables.tf file:
 
 ```
 variable "aws_access_key" {

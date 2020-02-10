@@ -16,6 +16,13 @@ resource "aws_security_group" "allow_connections_gophish" {
     protocol    = "tcp"
     cidr_blocks = formatlist("%s/32", list(chomp(data.http.external_ip.body)))
   }
+  ingress {
+    /* Admin Panel incoming */
+    from_port   = 3333
+    to_port     = 3333
+    protocol    = "tcp"
+    cidr_blocks = formatlist("%s/32", list(chomp(data.http.external_ip.body)))
+  }
 
   tags = {
     Name = "allow_connections_gophish"
